@@ -31,34 +31,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onCreateOptionsMenu(Menu menu)
     {
         super.onCreateOptionsMenu(menu);
-        MenuItem about = menu.add("About");
         MenuItem exit = menu.add("Exit");
 
-        about.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.setIcon(R.mipmap.ic_launcher);
-                dialog.setTitle("About App");
-                dialog.setMessage("Пятнашки ("+getPackageName());
 
-                dialog.show();
-                return true;
-            }
-        });
         exit.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-                dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                dialog.setPositiveButton("Да", new DialogInterface.OnClickListener()
                 {
                     @Override
                     public void onClick(DialogInterface dialog, int which)
@@ -66,10 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         finish();
                     }
                 });
-                dialog.setIcon(R.drawable.exit);
-                dialog.setTitle("Exit App");
-                dialog.setMessage("Do you really want to exit Puzzle 15");
-                dialog.setNegativeButton("NO",new DialogInterface.OnClickListener()
+                dialog.setTitle("Выйти из игры");
+                dialog.setMessage("Вы хотите выйти из игры?");
+                dialog.setNegativeButton("Нет",new DialogInterface.OnClickListener()
                 {
                     @Override
                     public void onClick(DialogInterface dialog, int which)

@@ -4,7 +4,7 @@
     <string name="welcome">Давай поиграем</string>
     <string name="start_new_game">Начать новую игру</string>
     <string name="moves">Moves: 0000</string>
-    <string name="time">Time: 00:00</string>
+    <string name="time">Время: 00:00</string>
     <string name="_1">1</string>
     <string name="_5">5</string>
     <string name="_9">9</string>

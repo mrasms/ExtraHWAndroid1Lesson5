@@ -119,10 +119,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 public void run() {
                     while (!done) {
                         if (!pauseTimer) {
-                            sec++; //count second
+                            sec++;
                             if (sec == 60) {
                                 sec = 0;
-                                m++; // count minutes
+                                m++;
                             }
                             runOnUiThread(new Runnable() {
                                 @Override
