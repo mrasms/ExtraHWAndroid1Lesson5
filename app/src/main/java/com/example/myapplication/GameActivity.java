@@ -103,7 +103,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         if (board.checkGameStatus()) {
                             done = true;
                             activateBoxes(false);
-                            Toast.makeText(this, "Game Over - Puzzle solved", Toast.LENGTH_LONG * 3).show();
+                            Toast.makeText(this, "Игра окончена", Toast.LENGTH_LONG * 3).show();
                         }
                     }
                 }
